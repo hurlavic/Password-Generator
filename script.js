@@ -34,3 +34,28 @@ function generatePassword(length, lowerCase, upperCase, numbers, specialCharacte
     return password;
 }
 
+//onclick handler to prompt user to choose password criteria
+generate.addEventListener('click', () => {
+    let length = prompt('How many characters would you like your password to contain?');
+
+    //if user chooses a length less than 10 or greater than 64, alert user
+    if (length < 10 || length > 64) {
+        alert('Password length must be between 10 and 64 characters.');
+    } else {
+        let lowerCase = confirm('Click OK to confirm including lowercase characters.');
+        let upperCase = confirm('Click OK to confirm including uppercase characters.');
+        let numbers = confirm('Click OK to confirm including numeric characters.');
+        let specialCharacters = confirm('Click OK to confirm including special characters.');
+
+        //if user does not choose any criteria, alert user to choose at least one
+        if (lowerCase === false && upperCase === false && numbers === false && specialCharacters === false) {
+            alert('You must choose at least one character type.');
+        }
+
+        //if user chooses a length between 8 and 128, generate password
+        if (length >= 8 && length <= 64) {
+            let password = generatePassword(length, lowerCase, upperCase, numbers, specialCharacters);
+            document.getElementById('password').innerHTML = password;
+        }
+    }
+});
