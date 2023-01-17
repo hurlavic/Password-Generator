@@ -1,5 +1,5 @@
 # Description
-This is a simple password generating webpage.
+This is a simple random password generating webpage.
 
 ## Installation
 N/A
