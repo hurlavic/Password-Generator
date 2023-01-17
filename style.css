@@ -1,0 +1,74 @@
+.container {
+    width: screen;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-container {
+    width: 80%;
+    box-shadow: 1px 1px 1px 1px grey;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 40px;
+    color: grey;
+}
+
+.password-container h4 {
+    font-size: 30px;
+}
+
+.password-screen {
+    text-align: center;
+    border: grey dotted;
+    padding-bottom: 80px;
+    color: grey;
+    font-size: 32px;
+}
+
+hr {
+    width: 100%;
+    margin: 15px auto
+}
+
+button {
+    width: 50%;
+    height: 50px;
+    justify-content: center;
+    display: flex;
+    border: none;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: #993300;
+    color: white;
+    font-size: 26px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+@media (min-width: 690px) {
+    .password-container {
+        width: 40%;
+    }
+}
+
+@media (max-width: 500px) {
+    button {
+        width: 60%;
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 30px;
+        color: grey;
+    }
+    .password-screen {
+        font-size: 20px;
+    }
+    .password-container h4 {
+        font-size: 22px;
+    }
+}
